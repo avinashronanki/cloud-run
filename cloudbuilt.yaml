@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/jadgs-262219/cloud-run@sha256:2e8588759cae5925e8e4beac012d2ab7cf276f6f83a91bf2fffbdabf34938bcc', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'gcr.io/jadgs-262219/cloud-run@sha256:2e8588759cae5925e8e4beac012d2ab7cf276f6f83a91bf2fffbdabf34938bcc', '.']
