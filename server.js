@@ -1,6 +1,8 @@
-const http = require('http')
-const PORT = process.env.PORT || 9000
-http.createServer((req, res) => {
-  console.log('New connection')
-  res.end('Hello Cloud Run v2 ' + new Date() )
-}).listen(PORT, () => console.log('Listening on', PORT))
+const http = require("http")
+const server = http.createServer((req,res)=>{
+    console.log("new connection")
+    res.end("hello Awesome")
+
+})
+const PORT = process.env.PORT || 8080
+server.listen(PORT, () =>console.log("listening"))
